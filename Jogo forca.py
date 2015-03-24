@@ -25,7 +25,7 @@ turtle.penup()
 turtle.setpos(0,-80)
 turtle.pendown()
 turtle.setpos(-20,-160)
-x
+x=0
 
 
 
