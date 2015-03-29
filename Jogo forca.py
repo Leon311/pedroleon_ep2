@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import turtle # Usa a biblioteca de turtle graphics
 window = turtle.Screen() # cria uma janela
-window.bgcolor("lightblue")
+window.bgcolor("pink")
 window.title("Forca")
 
 from random import choice 
@@ -66,12 +66,23 @@ while (erros<6 and score<tamanho):
         y=0
         while j<n:
             y=escolha.index(letra,y+1)
-        k=escolha.index(letra)
-        if letra in escolha:
-            turtle.penup()
-            turtle.setpos(-240+(25*k),-245)
-            turtle.pendown()
-            turtle.write(letra)
+            k=escolha.index(letra)
+            score=+1
+            j=+1
+            
+            if letra in escolha:
+                turtle.penup()
+                turtle.setpos(-240+(25*k),-245)
+                turtle.pendown()
+                turtle.write(letra)
+                print(score)
+            else:
+                erros=+1
+                print (score)
+                print ("errouuu")
+while (erros>=6 and score>tamanho):
+    print ("Perdeu")            
+            
 window.exitonclick()   
 
 
