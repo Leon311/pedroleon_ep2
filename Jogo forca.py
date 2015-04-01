@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import turtle # Usa a biblioteca de turtle graphics
 window = turtle.Screen() # cria uma janela
 window.bgcolor("green")
@@ -40,85 +41,49 @@ print(tamanho)
 erros=0
 score=0
 def desenho(erros):   
-        lapis= turtle.Turtle()
-        lapis.speed(5)
-        lapis.color("white")
+        turtle.speed(5)
+        turtle.color("black")
           #funçaõ completa do desenho do boneco
         if erros == 1:
-            lapis.penup()
-            lapis.setpos(100,120)  
-            lapis.pendown()
-            lapis.circle(30)
+            turtle.penup()
+            turtle.setpos(100,120)  
+            turtle.pendown()
+            turtle.circle(30)
         if erros == 2:
-            lapis.penup()
-            lapis.setpos(100,120)
-            lapis.pendown()
-            lapis.right(90)
-            lapis.forward(70)
+            turtle.penup()
+            turtle.setpos(100,120)
+            turtle.pendown()
+            turtle.right(90)
+            turtle.forward(70)
         if erros == 3:
-            lapis.penup()
-            lapis.setpos(100,100)
-            lapis.pendown()
-            lapis.right(30)
-            lapis.forward(50)
+            turtle.penup()
+            turtle.setpos(100,100)
+            turtle.pendown()
+            turtle.right(30)
+            turtle.forward(50)
         if erros == 4:
-            lapis.penup()
-            lapis.setpos(-300,70)
-            lapis.pendown()
-            lapis.left(60)
-            lapis.forward(50)
+            turtle.penup()
+            turtle.setpos(100,100)
+            turtle.pendown()
+            turtle.left(60)
+            turtle.forward(50)
         if erros == 5:
-            lapis.penup()
-            lapis.setpos(-300,120)
-            lapis.pendown()
-            lapis.right(70)
-            lapis.forward(35)
-            lapis.penup()
-            lapis.color("green")
-            lapis.setpos(-330,95)
-            lapis.pendown()
-            lapis.circle(5)
-            lapis.color("white")
+            turtle.penup()
+            turtle.setpos(100,50)
+            turtle.pendown()
+            turtle.setpos(70,30)   
         if erros == 6:
-            lapis.penup()
-            lapis.setpos(-300,120)
-            lapis.pendown()
-            lapis.color("white")
-            lapis.left(80)
-            lapis.forward(35)
-            lapis.penup()
-            lapis.setpos(-280,87)
-            lapis.pendown()
-            lapis.color("green")
-            lapis.circle(5)
-            lapis.penup()
-            lapis.color("red")
-            lapis.setpos(-310,180)
-            lapis.pendown()
-            lapis.right(70)
-            lapis.forward(15)
-            lapis.penup()
-            lapis.setpos(-320,180)
-            lapis.pendown()
-            lapis.left(70)
-            lapis.forward(17)
-            lapis.penup()
-            lapis.setpos(-285,180)
-            lapis.pendown()
-            lapis.right(70)
-            lapis.forward(15)
-            lapis.penup()
-            lapis.setpos(-295,180)
-            lapis.pendown()
-            lapis.left(70)
-            lapis.forward(17)
-            lapis.penup()
-            lapis.setpos(-650, 150)
-            lapis.pendown()
-            lapis.color("pink")
-            lapis.write("""PERDEDOR!""", font = ("Arial",30 , "normal"))
-            lapis.color("white")
-            
+            turtle.penup()
+            turtle.setpos(100,50)
+            turtle.pendown()
+            turtle.setpos(130,30)
+            turtle.color("white")
+            turtle.color("white")
+            turtle.write("""Você perdeu""", font = ("Arial",15 , "normal"))
+            turtle.color("white")
+            window.textinput("Repetir","Você quer jogar de novo?")
+                            
+                
 while (erros<6 and score<tamanho):  # análise da pal
         letra=window.textinput("letra",'escoha uma letra')  #carac digitado
         n=escolha.count(letra)  #conta n. ocorr do carac na pal
@@ -154,14 +119,13 @@ while (erros<6 and score<tamanho):  # análise da pal
 
 print("score",score)
 if (erros>=6):
-    print("Perdeu")            
+    print("Perdeu") 
+               
 else:
     print("acertou !")
-    print(score) 
+    print(score)
+        
+
 f.close()       
 window.exitonclick()   
-
-
-
-
 
